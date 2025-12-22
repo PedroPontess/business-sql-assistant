@@ -23,6 +23,7 @@ def get_db_connection() -> SQLDatabase:
 
     print(f"📂 Database found at: {db_path}")
 
+    db_path = db_path.replace("\\", "/")
     db_uri = f"sqlite:///file:{db_path}?mode=ro&uri=true"
 
     try:
@@ -30,7 +31,7 @@ def get_db_connection() -> SQLDatabase:
             db_uri,
             engine_args={
                 "connect_args": {"uri": True},
-                "poolclass": StaticPool,  # Good for SQLite + Streamlit
+                "poolclass": StaticPool,
             },
         )
     except Exception as e:
