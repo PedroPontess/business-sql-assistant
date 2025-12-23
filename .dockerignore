@@ -1,0 +1,35 @@
+# --- Security (CRITICAL) ---
+# Never copy secrets into the image!
+.env
+.env.local
+**/.DS_Store
+
+# --- Dependencies & Environments ---
+# We install fresh dependencies inside the container,
+# so we don't want your local virtual environment.
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Git & Project Metadata ---
+# The container doesn't need version control history
+.git/
+.gitignore
+.dockerignore
+README.md
+LICENSE
+
+# --- uv / Packaging ---
+# Since we are using requirements.txt inside Docker for simplicity,
+# we can technically ignore these, but keeping them out reduces clutter.
+uv.lock
+pyproject.toml
+.python-version
+
+# --- IDE/Editor Configs ---
+.vscode/
+.idea/
