@@ -34,20 +34,25 @@ The project follows a modular source layout standard in professional Python deve
 
 ```text
 business-sql-assistant/
-├── .dockerignore       # Docker build optimization
-├── .env                # API Keys (Not in repo)
-├── .python-version     # Pinned Python version (3.12)
-├── Dockerfile          # Container blueprint
-├── pyproject.toml      # Project definition
-├── uv.lock             # Exact dependency locking
-├── requirements.txt    # Production Dependencies (Hash-locked)
+├── .github/
+│   └── workflows/
+│       └── ci-pipeline.yml   # GitHub Actions (CI/CD)
+├── tests/
+│   └── test_security.py      # Security Verification (Pytest)
+├── .dockerignore             # Docker build optimization
+├── .env                      # API Keys (Not in repo)
+├── .python-version           # Pinned Python version (3.12)
+├── Dockerfile                # Container blueprint
+├── pyproject.toml            # Project definition
+├── uv.lock                   # Exact dependency locking
+├── requirements.txt          # Production Dependencies
 ├── data/
-│   └── Chinook.db      # SQLite Database
+│   └── Chinook.db            # SQLite Database
 └── src/
-    ├── app.py          # Streamlit Web Interface
-    ├── agent.py        # LLM & Agent Configuration
-    ├── database.py     # Secure DB Connection Logic
-    └── main.py         # CLI Entrypoint (Terminal mode)
+    ├── app.py                # Streamlit Web Interface
+    ├── agent.py              # LLM & Agent Configuration
+    ├── database.py           # Secure DB Connection Logic
+    └── main.py               # CLI Entrypoint
 ```
 
 ---
