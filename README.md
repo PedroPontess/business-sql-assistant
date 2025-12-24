@@ -40,7 +40,6 @@ business-sql-assistant/
 ├── tests/
 │   └── test_security.py      # Security Verification (Pytest)
 ├── .dockerignore             # Docker build optimization
-├── .env                      # API Keys (Not in repo)
 ├── .python-version           # Pinned Python version (3.12)
 ├── Dockerfile                # Container blueprint
 ├── pyproject.toml            # Project definition
